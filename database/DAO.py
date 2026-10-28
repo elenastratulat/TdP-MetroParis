@@ -28,7 +28,7 @@ class DAO():
 
         cursor = conn.cursor(dictionary=True)
         query = "select * from connessione c where c.id_stazP = %s and c.id_stazA = %s"
-        cursor.execute(query, (u.id_fermata, v.id_germata))
+        cursor.execute(query, (u.id_fermata, v.id_fermata))
 
         for row in cursor:
             result.append(row)
